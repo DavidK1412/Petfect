@@ -1,0 +1,55 @@
+$font: "Roboto", sans-serif;
+$font-title: "Nunito", sans-serif;
+$color--p1: #474d59;
+$color--p2: #0b0c12;
+$color--b1: #fcfcfc;
+$color--b2: #f7f7f7;
+$color--r1: #b675ff;
+$color--r2: #6619b3;
+$color--r3: #a55bf0;
+$color--r4: #8f42db;
+$color--l1: #fff896;
+$color--l2: #ffae31;
+
+:root {
+  --h1: 4.8rem;
+  --h2: 3rem;
+  --hero-p: 2.5rem;
+  --mg-lados: 5%;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+}
+body {
+  min-height: 100vh;
+  color: $color--p2;
+  background: $color--b1;
+}
+img {
+  display: block;
+  max-width: 100%;
+  pointer-events: none;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+.container {
+  max-width: 144rem;
+  height: 100%;
+  margin: 0 auto;
+}
