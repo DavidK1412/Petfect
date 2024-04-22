@@ -2,5 +2,5 @@
   <router-view/>
 </template>
 
-<style scoped>
+<style>
 </style>

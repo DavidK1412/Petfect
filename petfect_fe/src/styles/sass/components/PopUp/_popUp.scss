@@ -1,0 +1,148 @@
+@import "../../base";
+
+.legends{
+
+  h1 {
+    font-family: $font-title;
+    font-size: 3.5rem;
+    text-align: left;
+  }
+
+  p{
+    font-family: $font;
+    font-size: 1.4rem;
+    text-align: left;
+
+    a{
+      color: $color--r2;
+      cursor: pointer;
+      transition: 0.3s;
+        &:hover{
+            color: $color--r3;
+            text-decoration: underline;
+        }
+    }
+  }
+}
+
+.special-link{
+  color: $color--r2;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover{
+    color: $color--r3;
+    text-decoration: underline;
+  }
+}
+
+.pop-up{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 32px 16px 120px;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(
+    $color--r2,
+    $alpha: 0.5
+  );
+  display: grid;
+  place-items: center;
+
+  &-close {
+    position: absolute;
+    height: 52px;
+    width: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    font-size: 3rem;
+    color: #d6d6d6;
+    cursor: pointer;
+  }
+
+  &-inner {
+    background-color: $color--b1;
+    color: #000;
+    position: relative;
+    width: 40%;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 5px rgba(
+        $color--p2,
+        $alpha: 0.2
+    );
+    transition: all 250ms ease-in-out;
+  }
+}
+
+#recaptchaInput{
+  width: 100%;
+  margin: 2% 0;
+}
+
+.fade-enter,
+.fade-leave-to{
+  opacity: 0;
+
+  .pop-up-inner{
+    opacity: 0;
+    transform: translateY(-32px);
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active{
+  transition: all 250ms ease-in-out;
+}
+
+.fade-leave-active{
+  transition-delay: 250ms;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="password"]{
+  width: 100%;
+  padding: 10px;
+  margin: 2% 0;
+  border: 1px solid $color--p2;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  &:hover,
+    &:focus{
+        outline: 0;
+        border: 3px solid $color--r2;
+    }
+}
+
+#recaptchaInput{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+label{
+  font-family: $font;
+  font-size: 1.4rem;
+  text-align: left;
+}
+
+.error{
+  color: red;
+  font-size: 1.4rem;
+}
+
+// add more styles for the input
+
+// Medias for phone popup. 80% width
+@media screen and (max-width: 768px){
+  .pop-up-inner{
+    width: 95%;
+  }
+}

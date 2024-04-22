@@ -1,7 +1,13 @@
+import LogInPopUp from "@/components/LogInPopUp.vue";
+
 export default {
     name: 'LandingPage',
+    components: {
+        LogInPopUp
+    },
     data() {
         return {
+            popUp: false,
             currentTestimonial: 0,
             indicators: [],
             mobileMenu: null,
@@ -14,6 +20,9 @@ export default {
         this.nav = this.$refs.nav;
     },
     methods: {
+        togglePopUp() {
+            this.popUp = !this.popUp;
+        },
         changeSlide(index) {
             this.indicators[this.currentTestimonial].classList.remove("active");
             this.$refs.slider.style.marginLeft = `-${index * 100}%`;

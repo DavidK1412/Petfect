@@ -12,7 +12,7 @@
               <li class="header_nav-item" v-on:click="toggleMenu"><a href="#about">Sobre Nosotros</a></li>
               <li class="header_nav-item" v-on:click="toggleMenu"><a href="#services">Servicios</a></li>
               <li class="header_nav-item" v-on:click="toggleMenu"><a href="#experiences">Experiencias</a></li>
-              <li class="header_nav-item" v-on:click="toggleMenu"><button>Agendar</button></li>
+              <li class="header_nav-item" v-on:click="toggleMenu"><button @click="togglePopUp">Agendar</button></li>
             </ul>
             <button ref="mobileMenu" v-on:click="toggleMenu"  class="mobile-menu" aria-expanded="false" aria-label="Abrir menu">
               <span class="mobile-menu_line-1"></span>
@@ -28,13 +28,16 @@
       <div class="container">
         <section id="home" class="hero">
           <div class="hero_content">
+            <transition name="fade">
+              <LogInPopUp v-show="popUp" @close="togglePopUp"/>
+            </transition>
             <header>
               <h1>
                 El <span class="hero_purple">mejor spa <img class="hero_detail" src="../assets/hero_detalle.svg" width="45" height="45"></span><br> para tu mascota.
               </h1>
             </header>
             <p>El trato que ellos merecen ❤️.</p>
-            <button class="main_btn">¡Agenda con nosotros!</button>
+            <button class="main_btn" @click="togglePopUp">¡Agenda con nosotros!</button>
           </div>
           <picture>
             <source media="(max-width: 1170px)" srcset="../assets/hero_mobileImg.jpg">

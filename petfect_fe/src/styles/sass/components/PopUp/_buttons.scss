@@ -1,0 +1,20 @@
+@import '../../base';
+
+.btn {
+  &-primary{
+    width: 100%;
+    padding: 10px;
+    margin: 2% 0;
+    border: none;
+    border-radius: 5px;
+    background-color: $color--r2;
+    color: $color--b1;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover{
+      background-color: $color--r3;
+    }
+  }
+}
+
