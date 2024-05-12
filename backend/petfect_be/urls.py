@@ -19,6 +19,8 @@ from django.urls import path
 from rest_framework_simplejwt.views import (TokenObtainPairView, TokenRefreshView)
 from authApp import views as auth_views
 from clientsApp import views as clients_views
+from employeesApp import views as employees_views
+from servicesApp import views as services_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -33,4 +35,13 @@ urlpatterns = [
     path('api/v1/clients_pets/', clients_views.PetDetailView.as_view()),
     path('api/v1/clients_pets/<str:pk>/', clients_views.PetDetailView.as_view()),
     path('api/v1/clients_pets/detail/<str:pk>/', clients_views.PetView.as_view()),
+    path('api/v1/employees/speciality/', employees_views.SpecialityView.as_view()),
+    path('api/v1/employees/speciality/<int:pk>/', employees_views.SpecialityDetailView.as_view()),
+    path('api/v1/employees/', employees_views.EmployeeView.as_view()),
+    path('api/v1/employees/<str:pk>/', employees_views.EmployeeDetailView.as_view()),
+    path('api/v1/employees_speciality/<str:pk>/', employees_views.EmployeeSpecialityView.as_view()),
+    path('api/v1/services/', services_views.ServiceView.as_view()),
+    path('api/v1/services/<str:pk>/', services_views.ServiceDetailView.as_view()),
+    path('api/v1/combos/', services_views.ComboView.as_view()),
+    path('api/v1/combos/<str:pk>/', services_views.ComboDetailView.as_view()),
 ]

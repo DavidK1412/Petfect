@@ -31,7 +31,12 @@ EMAIL_HOST_PASSWORD = 'fbpb drua pojv raeq'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    '*',
+    'localhost',
+    '.vercel.app',
+    '.now.sh'
+]
 
 
 # Application definition
@@ -48,7 +53,8 @@ INSTALLED_APPS = [
     "employeesApp",
     "clientsApp",
     "servicesApp",
-    "emailApp"
+    "emailApp",
+    "corsheaders",
 ]
 
 SIMPLE_JWT = {
@@ -71,6 +77,14 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+]
+
+CORS_ALLOWED_ORIGINS = [
+    'https://petfect.vercel.app',
+    "http://localhost:3000",
+    "http://localhost:8000",
+    "http://localhost:8080",
 ]
 
 REST_FRAMEWORK = {
