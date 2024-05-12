@@ -1,0 +1,21 @@
+{% block content %}
+    <div style="background-color: #0b0c12; width: 100%; height: 30%;">
+        <h1 style="color: #fcfcfc;"><span style="color: #6619b3;">&#128062;</span>Petfect<span style="color: #6619b3;">.</span></h1>
+    </div>
+    <section style="text-align: center">
+        <h2 style="color: black">{{ data.user.email }}, ¡Gracias por registrarte en Petfect!</h2>
+        <h2 style="color: black">Tú codigo de confirmación es:  </h2>
+        <h1 style="font-size: 3rem; color: #6619b3;"> {{ data.code }}</h1>
+        <h2 style="color: black">¡No lo compartas con nadie! 🙊</h2>
+    </section>
+    <div style="background-color: #0b0c12; width: 100%; height: 30%; text-align: center;">
+        <div id="social">
+            <a href="https://petfect.vercel.app/#home" style="text-decoration: none;">
+                <h1 style="color: #fcfcfc;"><span style="color: #6619b3;">&#128062;</span>Petfect<span style="color: #6619b3;">.</span></h1>
+            </a>
+            <hr style="width: 80%;">
+            <p style="color: #fcfcfc;">© 2024 <a style="color: #6619b3;" href="https://petfect.vercel.app/#home">Petfect.</a> Todos los derechos reservados.</p>
+            <br>
+        </div>
+    </div>
+{% endblock %}
