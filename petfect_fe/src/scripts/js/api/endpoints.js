@@ -4,5 +4,11 @@ export const ENDPOINTS = {
         activate: 'users/email/activate/',
         createWithOutEmployee: 'users/',
         register: 'clients/'
+    },
+    clients: {
+        detail: 'clients/id/'
+    },
+    users: {
+        list: 'users/',
     }
 }

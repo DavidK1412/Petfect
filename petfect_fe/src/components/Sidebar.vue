@@ -1,3 +1,5 @@
+<script src="@/scripts/js/components/sidebar.js"></script>
+
 <template>
   <aside :class="`${ is_expanded ? 'is-expanded' : ''}`">
     <div class="logo">
@@ -5,13 +7,24 @@
     </div>
 
     <div class="menu-toggle-wrap">
-      <button class="menu-toggle" @click="ToggleMenu">
+      <i class="menu-toggle" @click="ToggleMenu">
         <span class="material-icons">keyboard_double_arrow_right</span>
-      </button>
+      </i>
     </div>
-    <h3 class="text-center">Bienvenido: {{  }}</h3>
     <div class="menu">
-
+      <h3 class="text-center">Bienvenido: {{ this.user.name }}</h3>
+      <div v-if="!this.isAdmin && this.loaded">
+        <div class="button">
+          <span class="material-icons">pets</span>
+          <span class="text">Mis mascotas</span>
+        </div>
+      </div>
+      <div v-if="this.isAdmin && this.loaded">
+        <div class="button">
+          <span class="material-icons">group</span>
+          <span class="text">Gestión empleados</span>
+        </div>
+      </div>
     </div>
     <div class="flex"></div>
 
@@ -25,5 +38,5 @@
 </template>
 
 <style scoped>
-
+@import "@/styles/css/components/Sidebar/sidebar.css";
 </style>

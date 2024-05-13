@@ -1,0 +1,180 @@
+:root {
+  --h1: 4.8rem;
+  --h2: 3rem;
+  --hero-p: 2.5rem;
+  --mg-lados: 5%;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+}
+
+body {
+  min-height: 100vh;
+  color: #0b0c12;
+  background: #fcfcfc;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  pointer-events: none;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.container {
+  max-width: 144rem;
+  height: 100%;
+  margin: 0 auto;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  background-color: #0b0c12;
+  color: #fcfcfc;
+  width: calc(2rem + 32px);
+  overflow: hidden;
+  min-height: 100vh;
+  padding: 1rem;
+  transition: 0.2s ease-in-out;
+}
+aside .flex {
+  flex: 1 1 0%;
+}
+aside .logo {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+aside .logo img {
+  width: 4rem;
+}
+aside .menu {
+  font-size: 1.5rem;
+}
+aside .menu > h3 {
+  font-size: 1.5rem;
+}
+aside .menu-toggle-wrap {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+  position: relative;
+  top: 0;
+  transition: 0.2s ease-in-out;
+}
+aside .menu-toggle-wrap .menu-toggle {
+  transition: 0.2s ease-in-out;
+}
+aside .menu-toggle-wrap .menu-toggle .material-icons {
+  font-size: 2rem;
+  color: #fcfcfc;
+  transition: 0.2s ease-out;
+}
+aside .menu-toggle-wrap .menu-toggle:hover .material-icons {
+  color: #fcfcfc;
+  transform: translateX(0.5rem);
+}
+aside h3, aside .button .text {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+aside h3 {
+  color: var(--light);
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+aside .menu {
+  margin: 0 -1rem;
+}
+aside .menu-toggle {
+  cursor: pointer;
+}
+aside .menu .button {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  padding: 0.5rem 1rem;
+}
+aside .menu .button .material-icons {
+  font-size: 2rem;
+  color: #fcfcfc;
+  transition: 0.2s ease-in-out;
+}
+aside .menu .button .text {
+  color: #fcfcfc;
+  transition: 0.2s ease-in-out;
+}
+aside .menu .button:hover {
+  background-color: #6619b3;
+  border-right: 5px solid #b675ff;
+}
+aside .menu .button:hover .material-icons, aside .menu .button:hover .text {
+  color: #0b0c12;
+}
+aside .menu .button.router-link-exact-active {
+  background-color: #b675ff;
+  border-right: 5px solid #6619b3;
+}
+aside .menu .button.router-link-exact-active .material-icons, aside .menu .button.router-link-exact-active .text {
+  color: #fcfcfc;
+}
+aside .footer {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+aside .footer p {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+aside.is-expanded {
+  width: 300px;
+}
+aside.is-expanded img {
+  width: 10em;
+}
+aside.is-expanded .menu-toggle-wrap {
+  top: -3rem;
+}
+aside.is-expanded .menu-toggle-wrap .menu-toggle {
+  transform: rotate(-180deg);
+}
+aside.is-expanded h3, aside.is-expanded .button .text {
+  opacity: 1;
+}
+aside.is-expanded .button .material-icons {
+  margin-right: 1rem;
+}
+aside.is-expanded .footer {
+  opacity: 0;
+}
+@media (max-width: 1024px) {
+  aside {
+    position: absolute;
+    z-index: 99;
+  }
+}
+
+/*# sourceMappingURL=sidebar.css.map */

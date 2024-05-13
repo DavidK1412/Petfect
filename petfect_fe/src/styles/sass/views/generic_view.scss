@@ -1,0 +1,42 @@
+@import "../base";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home {
+  &-content {
+    margin-left: 5%;
+    width: 100%;
+  }
+}
+
+button {
+  cursor: pointer;
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.app {
+  display: flex;
+
+  main {
+    flex: 1 1 0;
+    padding: 2rem;
+
+    @media (max-width: 1024px) {
+      padding-left: 6rem;
+    }
+  }
+}
+
+@media (max-width: 728px) {
+  .content{
+    margin-left: 20%;
+
+  }
+}

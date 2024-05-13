@@ -1,9 +1,8 @@
 <template>
   <div>
-        <h1>
-            User View
-        </h1>
-    </div>
+    <SidebarMenu>
+    </SidebarMenu>
+  </div>
 </template>
 
 <script src="@/scripts/js/views/user_view.js"></script>

@@ -1,0 +1,163 @@
+@import '../../base';
+
+aside {
+  display: flex;
+  flex-direction: column;
+
+  background-color: $color--p2;
+  color: $color--b1;
+
+  width: calc(2rem + 32px);
+  overflow: hidden;
+  min-height: 100vh;
+  padding: 1rem;
+
+  transition: 0.2s ease-in-out;
+
+  .flex {
+    flex: 1 1 0%;
+  }
+
+  .logo {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    img {
+      width: 4rem;
+    }
+  }
+
+  .menu {
+    font-size: 1.5rem;
+  }
+
+  .menu > h3 {
+    font-size: 1.5rem;
+  }
+
+  .menu-toggle-wrap {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+
+    position: relative;
+    top: 0;
+    transition: 0.2s ease-in-out;
+
+    .menu-toggle {
+      transition: 0.2s ease-in-out;
+      .material-icons {
+        font-size: 2rem;
+        color: $color--b1;
+        transition: 0.2s ease-out;
+      }
+
+      &:hover {
+        .material-icons {
+          color: $color--b1;
+          transform: translateX(0.5rem);
+        }
+      }
+    }
+  }
+
+  h3, .button .text {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  h3 {
+    color: var(--light);
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+  }
+
+  .menu {
+    margin: 0 -1rem;
+
+    &-toggle {
+      cursor: pointer;
+    }
+
+    .button {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+      padding: 0.5rem 1rem;
+
+      .material-icons {
+        font-size: 2rem;
+        color: $color--b1;
+        transition: 0.2s ease-in-out;
+      }
+      .text {
+        color: $color--b1;
+        transition: 0.2s ease-in-out;
+      }
+
+      &:hover {
+        background-color: $color--r2;
+        border-right: 5px solid $color--r1;
+        .material-icons, .text {
+          color: $color--p2;
+        }
+      }
+
+      &.router-link-exact-active {
+        background-color: $color--r1;
+        border-right: 5px solid $color--r2;
+
+        .material-icons, .text {
+          color: $color--b1;
+        }
+      }
+    }
+  }
+
+  .footer {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+
+    p {
+      font-size: 0.875rem;
+      color: #64748b;
+    }
+  }
+
+  &.is-expanded {
+    width: 300px;
+
+    img {
+      width: 10em;
+    }
+
+    .menu-toggle-wrap {
+      top: -3rem;
+
+      .menu-toggle {
+        transform: rotate(-180deg);
+      }
+    }
+
+    h3, .button .text {
+      opacity: 1;
+    }
+
+    .button {
+      .material-icons {
+        margin-right: 1rem;
+      }
+    }
+
+    .footer {
+      opacity: 0;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    position: absolute;
+    z-index: 99;
+  }
+}
