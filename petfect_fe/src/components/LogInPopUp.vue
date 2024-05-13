@@ -9,14 +9,14 @@
       </div>
       <div class="legends">
         <h1 class="">¡Bienvenido de nuevo!</h1>
-        <p> Por favor, rellena los datos para iniciar sesión <a>¿Aún no tienes cuenta?</a></p>
+        <p> Por favor, rellena los datos para iniciar sesión <a @click="this.$emit('register')">¿Aún no tienes cuenta?</a></p>
       </div>
       <label for="email">Correo</label>
-      <input type="email" name="email"  placeholder="Correo">
+      <input v-model="this.email" type="email" name="email"  placeholder="Correo" autocomplete="off">
       <label for="password">Contraseña</label>
-      <input type="password" name="password"  placeholder="Contraseña">
+      <input v-model="this.password" type="password" name="password"  placeholder="Contraseña">
       <span class="error" v-if="error !== null"> {{ this.error }}</span>
-      <button class="btn-primary">Iniciar sesión</button>
+      <button @click="logIn" class="btn-primary">Iniciar sesión</button>
       <a class="special-link">¿Olvidaste tu contraseña?</a>
       <div id="recaptchaInput">
         <VueRecaptcha

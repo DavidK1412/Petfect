@@ -7,14 +7,25 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@formkit/addons": "^1.6.2",
+    "@formkit/i18n": "^1.6.2",
+    "@formkit/icons": "^1.6.2",
+    "@formkit/themes": "^1.6.2",
     "@formkit/vue": "^1.6.2",
+    "@popperjs/core": "^2.11.8",
     "@unhead/vue": "^1.9.7",
+    "axios": "^1.6.8",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
     "core-js": "^3.8.3",
     "crypto": "^1.0.1",
     "dotenv": "^16.4.5",
+    "jwt-decode": "^4.0.0",
+    "popper.js": "^1.16.1",
     "vue": "^3.2.13",
     "vue-recaptcha": "^2.0.3",
-    "vue-router": "^4.0.3"
+    "vue-router": "^4.0.3",
+    "vue-sweetalert2": "^5.0.5"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~5.0.0",

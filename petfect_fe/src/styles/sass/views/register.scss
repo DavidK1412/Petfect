@@ -1,0 +1,121 @@
+@import '../base';
+
+.background {
+  background: $color--r4;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.legends{
+
+  h1 {
+    font-family: $font-title;
+    font-size: 3.5rem;
+    text-align: left;
+  }
+
+  p{
+    font-family: $font;
+    font-size: 1.4rem;
+    text-align: left;
+
+    a{
+      color: $color--r2 !important;
+      cursor: pointer !important;
+      transition: 0.3s !important;
+      &:hover{
+        color: $color--r3 !important;
+        text-decoration: underline !important;
+      }
+    }
+  }
+}
+
+
+.register {
+
+  z-index: 10;
+  padding: 32px 16px 120px;
+  width: 100%;
+  background-color: rgba(
+                  $color--r2,
+          $alpha: 0.5
+  );
+  display: grid;
+  place-items: center;
+
+  &-close {
+    position: absolute;
+    height: 52px;
+    width: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    font-size: 3rem;
+    color: #d6d6d6;
+    cursor: pointer;
+  }
+  &-inner{
+    background-color: $color--b1;
+    color: #000;
+    position: relative;
+    width: 60%;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 5px rgba(
+                    $color--p2,
+                    $alpha: 0.2
+    );
+  }
+  &-form{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .register-inner{
+    width: 95%;
+  }
+}
+
+.formkit-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100% !important;
+  margin: 0 auto;
+}
+
+.formkit-tab-label {
+    font-size: 1.4rem !important;
+}
+
+.formkit-steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100% !important;
+  font-size: 1.8rem !important;
+}
+
+.formkit-label {
+    font-family: $font !important;
+    font-size: 1.8rem !important;
+    margin: 2% 0;
+}
+
+.formkit-input {
+    font-family: $font !important;
+    font-size: 1.3rem !important;
+    margin: 2% 0;
+}
+
+.formkit-wrapper > button {
+  margin: 2rem !important;
+}

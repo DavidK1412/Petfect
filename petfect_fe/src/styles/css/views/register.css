@@ -1,0 +1,155 @@
+:root {
+  --h1: 4.8rem;
+  --h2: 3rem;
+  --hero-p: 2.5rem;
+  --mg-lados: 5%;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+}
+
+body {
+  min-height: 100vh;
+  color: #0b0c12;
+  background: #fcfcfc;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  pointer-events: none;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.container {
+  max-width: 144rem;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.background {
+  background: #8f42db;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.legends h1 {
+  font-family: "Nunito", sans-serif;
+  font-size: 3.5rem;
+  text-align: left;
+}
+.legends p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  text-align: left;
+}
+.legends p a {
+  color: #6619b3 !important;
+  cursor: pointer !important;
+  transition: 0.3s !important;
+}
+.legends p a:hover {
+  color: #a55bf0 !important;
+  text-decoration: underline !important;
+}
+
+.register {
+  z-index: 10;
+  padding: 32px 16px 120px;
+  width: 100%;
+  background-color: rgba(102, 25, 179, 0.5);
+  display: grid;
+  place-items: center;
+}
+.register-close {
+  position: absolute;
+  height: 52px;
+  width: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  font-size: 3rem;
+  color: #d6d6d6;
+  cursor: pointer;
+}
+.register-inner {
+  background-color: #fcfcfc;
+  color: #000;
+  position: relative;
+  width: 60%;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 5px 5px rgba(11, 12, 18, 0.2);
+}
+.register-form {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .register-inner {
+    width: 95%;
+  }
+}
+.formkit-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100% !important;
+  margin: 0 auto;
+}
+
+.formkit-tab-label {
+  font-size: 1.4rem !important;
+}
+
+.formkit-steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100% !important;
+  font-size: 1.8rem !important;
+}
+
+.formkit-label {
+  font-family: "Roboto", sans-serif !important;
+  font-size: 1.8rem !important;
+  margin: 2% 0;
+}
+
+.formkit-input {
+  font-family: "Roboto", sans-serif !important;
+  font-size: 1.3rem !important;
+  margin: 2% 0;
+}
+
+.formkit-wrapper > button {
+  margin: 2rem !important;
+}
+
+/*# sourceMappingURL=register.css.map */

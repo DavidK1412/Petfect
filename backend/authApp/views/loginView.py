@@ -4,6 +4,7 @@ from rest_framework.views import APIView
 from django.contrib.auth import authenticate
 from rest_framework_simplejwt.tokens import RefreshToken
 from authApp.serializers.loginSerializer import LoginSerializer
+from authApp.security.token_validator import get_client_id
 
 
 class LoginView(APIView):
@@ -28,6 +29,7 @@ class LoginView(APIView):
         refresh = RefreshToken.for_user(user)
         refresh['role'] = user.role.name
         refresh['id'] = str(user.id)
+        refresh['client_id'] = get_client_id(str(user.id))
         return Response({
             'refresh': str(refresh),
             'access': str(refresh.access_token),

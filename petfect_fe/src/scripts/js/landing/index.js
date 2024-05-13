@@ -20,8 +20,15 @@ export default {
         this.nav = this.$refs.nav;
     },
     methods: {
+        loadView(){
+            console.log('loadView');
+            this.$emit('loadView');
+        },
         togglePopUp() {
             this.popUp = !this.popUp;
+        },
+        register() {
+            this.$emit('register');
         },
         changeSlide(index) {
             this.indicators[this.currentTestimonial].classList.remove("active");

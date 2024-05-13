@@ -29,7 +29,7 @@
         <section id="home" class="hero">
           <div class="hero_content">
             <transition name="fade">
-              <LogInPopUp v-show="popUp" @close="togglePopUp"/>
+              <LogInPopUp v-show="popUp" @close="togglePopUp" @loadView="loadView" @register="register"/>
             </transition>
             <header>
               <h1>

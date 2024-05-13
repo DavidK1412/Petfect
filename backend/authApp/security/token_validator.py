@@ -28,4 +28,4 @@ def get_user_id(token):
 
 def get_client_id(user_id):
     client = Client.objects.get(user=user_id)
-    return client.id
+    return str(client.id)
