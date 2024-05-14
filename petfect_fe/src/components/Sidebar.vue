@@ -28,7 +28,7 @@
           <span class="material-icons">diversity_1</span>
           <span class="text">Gestión Clientes</span>
         </div>
-        <div class="button">
+        <div class="button" @click="this.$emit('setUsers')">
           <span class="material-icons">account_circle</span>
           <span class="text">Gestión Usuarios</span>
         </div>

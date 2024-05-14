@@ -13,6 +13,7 @@ export const ENDPOINTS = {
     },
     users: {
         list: 'users/',
+        edit: 'users/id/',
     },
     employees: {
         getSpecialities: 'employees/speciality/',

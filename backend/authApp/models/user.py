@@ -43,5 +43,9 @@ class User(AbstractBaseUser, PermissionsMixin):
         self.email_verified = True
         super().save()
 
+    def change_role(self, role):
+        self.role = role
+        super().save()
+
     objects = UserManager()
     USERNAME_FIELD = 'email'

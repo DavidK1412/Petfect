@@ -19,9 +19,7 @@ class UserChangeRoleView(generics.GenericAPIView):
         role = Role.objects.get(id=request.data['role'])
         if not role:
             return Response({'error': 'Role not found'}, status=status.HTTP_404_NOT_FOUND)
-        user_serializer = UserSerializer(user, data={'role': role.id}, partial=True)
-        if not user_serializer.is_valid():
-            return Response(user_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-        user_serializer.save()
+
+        user.change_role(role)
 
         return Response({'Message:': 'Rol actualizado'}, status=status.HTTP_200_OK)

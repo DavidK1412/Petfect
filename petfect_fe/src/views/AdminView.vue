@@ -5,7 +5,7 @@
             class="sidebar"
             v-on:setEmployees="changeComponent('employees')"
             v-on:setClients="changeComponent('clients')"
-            v-on:setUsers="changeComponent('clients')"
+            v-on:setUsers="changeComponent('users')"
         >
         </SidebarMenu>
         <div class="content">

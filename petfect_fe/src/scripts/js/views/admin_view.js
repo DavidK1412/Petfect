@@ -1,13 +1,15 @@
 import SidebarMenu from "@/components/Sidebar.vue";
 import EmployeesAdmin from "@/components/EmployeesAdmin.vue";
 import ClientsAdmin from "@/components/ClientsAdmin.vue";
+import UsersAdmin from "@/components/UsersAdmin.vue";
 
 export default {
     name: 'AdminView',
     components: {
         EmployeesAdmin,
         SidebarMenu,
-        ClientsAdmin
+        ClientsAdmin,
+        UsersAdmin
     },
     data() {
         return {
