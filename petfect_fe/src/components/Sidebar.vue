@@ -20,9 +20,17 @@
         </div>
       </div>
       <div v-if="this.isAdmin && this.loaded">
-        <div class="button">
+        <div class="button" @click="this.$emit('setEmployees')">
           <span class="material-icons">group</span>
           <span class="text">Gestión empleados</span>
+        </div>
+        <div class="button" @click="this.$emit('setClients')">
+          <span class="material-icons">diversity_1</span>
+          <span class="text">Gestión Clientes</span>
+        </div>
+        <div class="button">
+          <span class="material-icons">account_circle</span>
+          <span class="text">Gestión Usuarios</span>
         </div>
       </div>
     </div>

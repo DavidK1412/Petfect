@@ -53,17 +53,14 @@ a {
   box-sizing: border-box;
 }
 
-.home-content {
-  margin-left: 5%;
-  width: 100%;
+.home {
+  display: flex;
+  flex-direction: row;
 }
 
-button {
-  cursor: pointer;
-  appearance: none;
-  border: none;
-  outline: none;
-  background: none;
+.content {
+  margin-left: 2%;
+  width: 100%;
 }
 
 .app {

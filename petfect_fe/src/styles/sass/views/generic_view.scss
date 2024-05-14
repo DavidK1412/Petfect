@@ -1,25 +1,23 @@
 @import "../base";
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 .home {
-  &-content {
-    margin-left: 5%;
-    width: 100%;
-  }
+  display: flex;
+  flex-direction: row;
 }
 
-button {
-  cursor: pointer;
-  appearance: none;
-  border: none;
-  outline: none;
-  background: none;
+.content{
+  margin-left: 2%;
+
+  width: 100%;
 }
+
+
 
 .app {
   display: flex;

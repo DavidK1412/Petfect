@@ -42,6 +42,7 @@ export default {
     },
     created: function() {
         const accessToken = sessionStorage.getItem('access');
+        localStorage.setItem('is_expanded', true);
         if(accessToken){
             const decodedToken = jwtDecode(accessToken);
             const view = decodedToken.role === 'ROLE_ADMIN' ? 'AdminView' : 'UserView';

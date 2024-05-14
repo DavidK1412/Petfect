@@ -20,7 +20,7 @@ export default {
         },
         logOut: function () {
             sessionStorage.clear("token");
-            localStorage.removeItem("is_expanded");
+            localStorage.setItem("is_expanded", true);
             this.$router.push({ name: 'LandingPage' });
         },
         getUser: async function () {

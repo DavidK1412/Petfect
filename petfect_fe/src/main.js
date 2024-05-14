@@ -10,9 +10,11 @@ import "sweetalert2/dist/sweetalert2.min.css";
 import '@formkit/addons/css/multistep';
 
 
+
 const app = createApp(App).use(router);
 app.use(plugin, defaultConfig(config));
 app.use(VueSweetalert2);
+
 app.mount('#app');
 
 import 'bootstrap/dist/js/bootstrap.min.js';
