@@ -27,6 +27,7 @@ urlpatterns = [
     path('api/v1/roles/<int:pk>/', auth_views.RoleDetailView.as_view()),
     path('api/v1/roles/', auth_views.RoleCreateView.as_view()),
     path('api/v1/users/', auth_views.UserCreateView.as_view()),
+    path('api/v1/users/<str:email>/', auth_views.UserChangeRoleView.as_view()),
     path('api/v1/users/<str:email>/activate/', auth_views.UserUpdateStateView.as_view()),
     path('api/v1/auth/login/', auth_views.LoginView.as_view()),
     path('api/v1/auth/refresh/', TokenRefreshView.as_view()),
