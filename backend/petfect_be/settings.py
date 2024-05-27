@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     "clientsApp",
     "servicesApp",
     "emailApp",
+    "bookingApp",
     "corsheaders",
 ]
 
