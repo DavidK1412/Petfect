@@ -20,8 +20,6 @@ class PetDetailView(generics.GenericAPIView):
             if pet is None:
                 return Response(status=status.HTTP_404_NOT_FOUND)
             client_id = get_client_id(get_user_id(request.META.get('HTTP_AUTHORIZATION')[7:]))
-            if pet.client.id != client_id or validate_admin(request.META.get('HTTP_AUTHORIZATION')[7:]) is False:
-                return Response(status=status.HTTP_401_UNAUTHORIZED)
             serializer = PetSerializer(pet)
             return Response(serializer.data, status=status.HTTP_200_OK)
         except Pet.DoesNotExist:
