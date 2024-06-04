@@ -28,6 +28,7 @@
   <div id="main">
     <div class="top-elements">
       <h1 class="text-center">Gestión de Usuarios</h1>
+      <button  class="btn" @click="this.print()" >Descargar esta página</button>
     </div>
     <div class="table-responsive">
       <table id="dtab" class="table table-striped">
@@ -64,5 +65,19 @@
     </div>
   </div>
 </template>
+
+<style>
+@media print {
+  body {
+    visibility: hidden;
+  }
+  .table-responsive {
+    visibility: visible;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+</style>
 
 <script src="@/scripts/js/components/users_admin.js"></script>

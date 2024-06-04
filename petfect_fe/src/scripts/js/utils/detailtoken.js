@@ -21,3 +21,12 @@ export const getClientDetail = async () => {
         return response.data;
     }
 }
+
+export const getClientId = async () => {
+    const token = sessionStorage.getItem('access');
+    if (!token) {
+        return null;
+    }
+    const decoded = jwtDecode(token);
+    return decoded.client_id;
+}

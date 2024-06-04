@@ -68,6 +68,9 @@ export default {
                 });
             }
             this.$emit('reloadComponent');
+        },
+        print(){
+            window.print();
         }
     },
     async mounted() {

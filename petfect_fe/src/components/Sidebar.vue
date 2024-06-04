@@ -14,7 +14,7 @@
     <div class="menu">
       <h3 class="text-center">Bienvenido: {{ this.user.name }}</h3>
       <div v-if="!this.isAdmin && this.loaded">
-        <div class="button">
+        <div class="button" @click="this.$emit('setPets')">
           <span class="material-icons">pets</span>
           <span class="text">Mis mascotas</span>
         </div>
@@ -31,6 +31,14 @@
         <div class="button" @click="this.$emit('setUsers')">
           <span class="material-icons">account_circle</span>
           <span class="text">Gestión Usuarios</span>
+        </div>
+        <div class="button" @click="this.$emit('setServices')">
+          <span class="material-icons">content_cut</span>
+          <span class="text">Servicios</span>
+        </div>
+        <div class="button" @click="this.$emit('setCombos')">
+          <span class="material-icons">inventory_2</span>
+          <span class="text">Combos</span>
         </div>
       </div>
     </div>

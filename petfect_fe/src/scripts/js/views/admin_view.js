@@ -2,6 +2,8 @@ import SidebarMenu from "@/components/Sidebar.vue";
 import EmployeesAdmin from "@/components/EmployeesAdmin.vue";
 import ClientsAdmin from "@/components/ClientsAdmin.vue";
 import UsersAdmin from "@/components/UsersAdmin.vue";
+import ServicesAdmin from "@/components/ServicesAdmin.vue";
+import CombosAdmin from "@/components/CombosAdmin.vue";
 
 export default {
     name: 'AdminView',
@@ -9,7 +11,9 @@ export default {
         EmployeesAdmin,
         SidebarMenu,
         ClientsAdmin,
-        UsersAdmin
+        UsersAdmin,
+        ServicesAdmin,
+        CombosAdmin
     },
     data() {
         return {
@@ -20,6 +24,7 @@ export default {
     methods: {
         changeComponent(component) {
             this.selected = component;
+            console.log(this.selected)
             this.compKey += 1;
         },
         reloadComponent() {
