@@ -30,8 +30,6 @@ class PetDetailView(generics.GenericAPIView):
             pet = Pet.objects.get(pk=kwargs['pk'])
             if pet is None:
                 return Response(status=status.HTTP_404_NOT_FOUND)
-            if pet.client.id != get_user_id(request.META.get('HTTP_AUTHORIZATION')[7:]) or validate_admin(request.META.get('HTTP_AUTHORIZATION')[7:]) is False:
-                return Response(status=status.HTTP_401_UNAUTHORIZED)
             pet.delete()
             return Response(status=status.HTTP_200_OK)
         except Pet.DoesNotExist:
@@ -42,8 +40,6 @@ class PetDetailView(generics.GenericAPIView):
             pet = Pet.objects.get(pk=kwargs['pk'])
             if pet is None:
                 return Response(status=status.HTTP_404_NOT_FOUND)
-            if pet.client.id != get_user_id(request.META.get('HTTP_AUTHORIZATION')[7:]) or validate_admin(request.META.get('HTTP_AUTHORIZATION')[7:]) is False:
-                return Response(status=status.HTTP_401_UNAUTHORIZED)
             serializer = PetSerializer(pet, data=request.data, partial=True)
             if serializer.is_valid():
                 serializer.save()
