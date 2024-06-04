@@ -63,6 +63,21 @@
         </tbody>
       </table>
     </div>
+    <div id="printable" style="width: 80%">
+      <!-- Texto centrado diciendo catalogo de combos -->
+      <h1 class="text-center">Usuarios</h1>
+      <!-- Tabla de usuarios, nombre, correo, rol y verificado -->
+      <div class="catalogo" v-for="client in clients">
+        <!-- Left side -->
+        <div class="left">
+          <h2>{{ client.name }}</h2>
+          <p> - {{ client.user.email }}</p>
+          <p>Rol: <strong>{{ client.user.role.name }}</strong></p>
+          <p>Verificado: <strong>{{ client.user.email_verified ? 'Sí' : 'No' }}</strong></p>
+        </div>
+      </div>
+
+    </div>
   </div>
 </template>
 
